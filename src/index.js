@@ -11,26 +11,26 @@ export default function humanDateRange({
     return null;
   }
 
-  console.log('startDate', startDate);
-
-  const sY = startDate.getFullYear();
-  const sM = startDate.getMonth();
-  const sD = startDate.getDate();
-  const eY = endDate.getFullYear();
-  const eM = endDate.getMonth();
-  const eD = endDate.getDate();
+  const sYear = startDate.getFullYear();
+  const sDate = startDate.getDate();
+  const sWeekday = showWeekDays ? startDate.toLocaleString('en-US', {weekday}) + ' ' : '';
+  const sMonth = startDate.toLocaleString('en-US', {month});
+  const eYear = endDate.getFullYear();
+  const eDate = endDate.getDate();
+  const eWeekday = showWeekDays ? endDate.toLocaleString('en-US', {weekday}) + ' ' : '';
+  const eMonth = endDate.toLocaleString('en-US', {month});
 
   // Check if month and year are the same
-  if (sY === eY && sM === eM) {
-    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${eD} ${eY}`;
+  if (sYear === eYear && sMonth === eMonth) {
+    return `${sWeekday}${sMonth} ${sDate}-${eWeekday}${eDate} ${eYear}`;
   }
 
   // Check if year is the same
-  if (sY === eY) {
-    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${endDate.toLocaleString('en-US', {month})} ${eD} ${eY}`;
+  if (sYear === eYear) {
+    return `${sWeekday}${sMonth} ${sDate}-${eWeekday}${eMonth} ${eDate} ${eYear}`;
   }
 
-  return `${startDate.toLocaleString('en-US', {month})} ${sD} ${sY}-${endDate.toLocaleString('en-US', {month})} ${eD} ${eY}`;
+  return `${sWeekday}${sMonth} ${sDate} ${sYear}-${eWeekday}${eMonth} ${eDate} ${eYear}`;
 }
 
 function isDate(date) {

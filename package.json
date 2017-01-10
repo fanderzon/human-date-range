@@ -1,0 +1,22 @@
+{
+  "name": "human-date-range",
+  "version": "1.0.0",
+  "description": "Small module for formatting a human readable date range",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanderzon/human-date-range.git"
+  },
+  "author": "Fredrik Andersson <f.anderzon@gmail.com> (http://fredrik.anderzon.se)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fanderzon/human-date-range/issues"
+  },
+  "homepage": "https://github.com/fanderzon/human-date-range#readme",
+  "devDependencies": {
+    "jest": "18.1.0"
+  }
+}

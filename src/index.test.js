@@ -12,4 +12,16 @@ describe('humanDateRange', () => {
   it('should print full dates when different years', () => {
     expect(humanDateRange({startDate: new Date(2016, 0, 1), endDate: new Date(2017, 0, 1)})).toBe('Jan 1 2016-Jan 1 2017');
   });
+
+  it('should use long month name if specified', () => {
+    expect(humanDateRange({startDate: new Date(2016, 0, 1), endDate: new Date(2017, 0, 1), month: 'long'})).toBe('January 1 2016-January 1 2017');
+  });
+
+  it('should show weekdays if specified', () => {
+    expect(humanDateRange({startDate: new Date(2017, 0, 1), endDate: new Date(2017, 0, 6), showWeekDays: true})).toBe('Sun Jan 1-Fri 6 2017');
+  });
+
+  it('should return null if startDate or endDate are not date objects', () => {
+    expect(humanDateRange({startDate: '2017-01-01', endDate: new Date(2017, 0, 6)})).toBe(null);
+  });
 });

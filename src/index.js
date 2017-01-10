@@ -25,6 +25,11 @@ export default function humanDateRange({
     return `${startDate.toLocaleString('en-US', {month})} ${sD}-${eD} ${sY}`;
   }
 
+  // Check if year is the same
+  if (sY === eY) {
+    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${endDate.toLocaleString('en-US', {month})} ${eD} ${sY}`;
+  }
+
   return null;
 }
 

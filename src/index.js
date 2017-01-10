@@ -22,15 +22,15 @@ export default function humanDateRange({
 
   // Check if month and year are the same
   if (sY === eY && sM === eM) {
-    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${eD} ${sY}`;
+    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${eD} ${eY}`;
   }
 
   // Check if year is the same
   if (sY === eY) {
-    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${endDate.toLocaleString('en-US', {month})} ${eD} ${sY}`;
+    return `${startDate.toLocaleString('en-US', {month})} ${sD}-${endDate.toLocaleString('en-US', {month})} ${eD} ${eY}`;
   }
 
-  return null;
+  return `${startDate.toLocaleString('en-US', {month})} ${sD} ${sY}-${endDate.toLocaleString('en-US', {month})} ${eD} ${eY}`;
 }
 
 function isDate(date) {

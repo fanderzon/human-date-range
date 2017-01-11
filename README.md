@@ -22,8 +22,13 @@ formatRange({
 ## Input properties
 
 `startDate`: Date object (required)
+
 `endDate`: Date object (required)
+
 `showWeekDays`: Boolean (default false) - Show weekday name before dates
+
 `month`: String `short` || `long` - Format for month, `Jan` or `January`
+
 `year`: String `numeric` || `2-digit` - Format for year `2017` or `17`
+
 `weekday`: String `short` || `long` - Format for weekday `Mon` or `Monday`

@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "prepublish": "rollup -c",
     "test": "jest --coverage"
   },
   "repository": {

@@ -3,7 +3,6 @@ export default function humanDateRange({
   endDate,
   showWeekDays = false,
   month = 'short',
-  year = 'numeric',
   weekday = 'short'
 }) {
   // Make sure both startDate and endDate are dates

@@ -1,12 +1,13 @@
 {
   "name": "human-date-range",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Small module for formatting a human readable date range",
   "main": "dist/index.js",
-  "jsnext:main": "src/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublish": "npm test && npm run build"
   },
   "repository": {
     "type": "git",

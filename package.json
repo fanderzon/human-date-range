@@ -1,6 +1,6 @@
 {
   "name": "human-date-range",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Small module for formatting a human readable date range",
   "main": "dist/index.js",
   "module": "src/index.js",

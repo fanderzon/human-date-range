@@ -29,6 +29,4 @@ formatRange({
 
 `month`: String `short` || `long` - Format for month, `Jan` or `January`
 
-`year`: String `numeric` || `2-digit` - Format for year `2017` or `17`
-
 `weekday`: String `short` || `long` - Format for weekday `Mon` or `Monday`
